@@ -16,7 +16,7 @@ public class StudentController {
 
     @GetMapping
     public List<Student> getAllStudents() {
-        return studentRepository.findAll();
+        return (List<Student>) studentRepository.findAll();
     }
 
     @GetMapping("/{id}")
@@ -30,13 +30,13 @@ public class StudentController {
         return studentRepository.save(student);
     }
 
-    @GetMapping("/search_by_name")
-    public Student searchByName(@RequestParam String name) {
-        return studentRepository.findByName(name).get();
-    }
-
-    @GetMapping("/test")
-    public Student testMethod() {
-        return studentRepository.customFinderById(2L, "Bob").get();
-    }
+//    @GetMapping("/search_by_name")
+//    public Student searchByName(@RequestParam String name) {
+//        return studentRepository.findByName(name).get();
+//    }
+//
+//    @GetMapping("/test")
+//    public Student testMethod() {
+//        return studentRepository.customFinderById(2L, "Bob").get();
+//    }
 }

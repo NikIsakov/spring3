@@ -1,4 +1,4 @@
-package ru.geekbrains.university.model;
+package ru.geekbrains.university.market;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

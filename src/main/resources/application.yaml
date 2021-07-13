@@ -1,7 +1,7 @@
 server:
-  port: 8189
+  port: 8190
   servlet:
-    context-path: /geek
+    context-path: /market
 spring:
   datasource:
     driver-class-name: org.h2.Driver
@@ -18,3 +18,7 @@ spring:
       enabled: true
       settings:
         web-allow-others: false
+
+  management:
+    security:
+      enabled=false:
